@@ -1,5 +1,5 @@
 # Symmetric-Encryption-with-a-Key
-The project involves creating a Java program that implements a symmetric encryption algorithm, such as AES (Advanced Encryption Standard). he program will allow the user to encrypt and decrypt text using a shared key. This project introduces you to the fundamentals of cryptography, Java cryptographic libraries, and working with data in different formats (byte arrays and strings). It also includes basic exception handling to manage potential errors during encryption and decryption.
+The project involves creating a Java program that implements a symmetric encryption algorithm, such as AES (Advanced Encryption Standard). The program will allow the user to encrypt and decrypt text using a shared key. This project introduces you to the fundamentals of cryptography, Java cryptographic libraries, and working with data in different formats (byte arrays and strings). It also includes basic exception handling to manage potential errors during encryption and decryption.
 
 # Deadline
 January 31, 2025
