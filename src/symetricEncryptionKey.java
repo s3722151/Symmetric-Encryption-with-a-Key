@@ -6,6 +6,10 @@ public class symetricEncryptionKey {
 		// TODO Auto-generated method stub
 		
 //		Input Phase: The user provides a text string and a shared key. Example: Input text is "Confidential Message" and the key is "MySecureKey!".
+	    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter a text string");
+
+	    String textString = myObj.nextLine();  // Read user input
 //
 //		Encryption Phase: The text is encrypted using the shared key. Example: The program transforms "Confidential Message" into "3cL7pQ==%!".
 //
