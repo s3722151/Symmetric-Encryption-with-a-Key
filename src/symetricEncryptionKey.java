@@ -12,8 +12,11 @@ public class symetricEncryptionKey {
 	    String textString = myObj.nextLine();  // Read user input
 //
 //		Encryption Phase: The text is encrypted using the shared key. Example: The program transforms "Confidential Message" into "3cL7pQ==%!".
+	    System.out.println("The encrypted string is: ");
+
 //
 //		Decryption Phase: The encrypted text is decrypted back into its original form using the same key. Example: "3cL7pQ==%!" is decrypted to "Confidential Message".
+	    System.out.println("The decrypted string is: ");
 
 
 	}
