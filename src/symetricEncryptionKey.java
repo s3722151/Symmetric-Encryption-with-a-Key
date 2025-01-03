@@ -22,3 +22,9 @@ public class symetricEncryptionKey {
 	}
 
 }
+
+/*
+References
+What is AES: https://www.techtarget.com/searchsecurity/definition/Advanced-Encryption-Standard
+Example code: https://www.baeldung.com/java-aes-encryption-decryption
+*/
