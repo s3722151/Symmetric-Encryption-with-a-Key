@@ -57,3 +57,6 @@ Created the project
 
 2/1/2025
 Created the project files. Looked at this: https://www.youtube.com/watch?v=LPT7v69guVY&t=376s
+
+3/1/2025
+Created the java class and comments.
