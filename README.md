@@ -50,3 +50,10 @@ Testing the Program
 
 Test with various keys and plaintext inputs.
 Handle edge cases, such as empty input or incorrect keys during decryption.
+
+# LOG
+1/1/2025
+Created the project
+
+2/1/2025
+Created the project files. Looked at this: https://www.youtube.com/watch?v=LPT7v69guVY&t=376s
