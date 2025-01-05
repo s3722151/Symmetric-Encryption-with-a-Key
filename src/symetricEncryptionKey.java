@@ -1,10 +1,41 @@
 import java.util.Scanner;  // Import the Scanner class
+import java.security.SecureRandom;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.xml.bind.DatatypeConverter;
 
 public class symetricEncryptionKey {
-
+//Methods
+    private static final String AES = "AES";
+	// We are using a Block cipher(CBC mode)
+	private static final String AES_CIPHER_ALGORITHM = "AES/CBC/PKCS5PADDING";
+	private static Scanner message;
+	
+    // Function to create a secret key
+    public static SecretKey createAESKey()
+        throws Exception
+    {
+        SecureRandom securerandom = new SecureRandom();
+        KeyGenerator keygenerator = KeyGenerator.getInstance(AES);
+        keygenerator.init(256, securerandom);
+        SecretKey key = keygenerator.generateKey();
+        return key;
+    }
+    // Function to initialize a vector with an arbitrary value
+    public static byte[] createInitializationVector()
+    {
+ 
+        // Used with encryption
+        byte[] initializationVector
+            = new byte[16];
+        SecureRandom secureRandom
+            = new SecureRandom();
+        secureRandom.nextBytes(initializationVector);
+        return initializationVector;
+    }
+	
+//Main Method
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		//Input Phase: The user provides a text string and a shared key. Example: Input text is "Confidential Message" and the key is "MySecureKey!".
 	    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 	    System.out.println("Enter a text string");
@@ -14,17 +45,14 @@ public class symetricEncryptionKey {
 	    
 	    //Key generation phase:
 	    
-	    
+
 	    //Encryption Phase: The text is encrypted using the shared key. Example: The program transforms "Confidential Message" into "3cL7pQ==%!".
 	    System.out.println("The encrypted string is: ");
 
 
-//		Decryption Phase: The encrypted text is decrypted back into its original form using the same key. Example: "3cL7pQ==%!" is decrypted to "Confidential Message".
+	    //Decryption Phase: The encrypted text is decrypted back into its original form using the same key. Example: "3cL7pQ==%!" is decrypted to "Confidential Message".
 	    System.out.println("The decrypted string is: ");
-
-
 	}//Main Method End
-
 }//Class End
 
 
