@@ -1,55 +1,68 @@
 # Symmetric-Encryption-with-a-Key
-The project involves creating a Java program that implements a symmetric encryption algorithm, such as AES (Advanced Encryption Standard). The program will allow the user to encrypt and decrypt text using a shared key. This project introduces you to the fundamentals of cryptography, Java cryptographic libraries, and working with data in different formats (byte arrays and strings). It also includes basic exception handling to manage potential errors during encryption and decryption.
+Summary
+This project involves implementing a program in Java that uses symmetric encryption to secure text. It will allow users to input a shared key and text, encrypt the text using a symmetric encryption algorithm (e.g., AES), and then decrypt the text back to its original form. The project will give you hands-on experience with cryptographic libraries, handling byte arrays, and basic exception management.
 
 # Deadline
-January 31, 2025
-You have about a month to complete the project, which should provide sufficient time to learn, implement, and test the program.
+January 15, 2025 (2 weeks from now).
 
 # Step-by-Step Explanation
-Understand Symmetric Encryption
+1.Understand Symmetric Encryption:
 
-Symmetric encryption uses the same key for both encryption and decryption.
-Example: If the key is mysecretkey123, the plaintext "Hello" could be transformed into ciphertext "A12b34!@". The same key is required to reverse the ciphertext back to "Hello".
-Project Flow
+Symmetric encryption uses a single shared key for both encryption and decryption.
+Example: If the shared key is "123456", the program will use this key to scramble (encrypt) and unscramble (decrypt) a message.
 
-Input Phase:
-The user provides a text string and a shared key.
-Example: Input text is "Confidential Message" and the key is "MySecureKey!".
+2.Setup the Development Environment:
 
-Encryption Phase:
-The text is encrypted using the shared key.
-Example: The program transforms "Confidential Message" into "3cL7pQ==%!".
+Ensure Java is installed on your system.
+Use an IDE like IntelliJ IDEA or Eclipse.
+Import necessary cryptographic libraries (javax.crypto).
 
-Decryption Phase:
-The encrypted text is decrypted back into its original form using the same key.
-Example: "3cL7pQ==%!" is decrypted to "Confidential Message".
+3.User Input:
 
-Java Cryptographic Libraries
+The program will prompt the user to input the text they want to encrypt and a shared key.
+E.g.
+Enter text to encrypt: HelloWorld  
+Enter encryption key: MySecretKey
 
-Use the javax.crypto package, which provides classes and methods for encryption and decryption.
-Example: Classes like Cipher help you apply cryptographic transformations.
-Working with Byte Arrays
+4.Encryption Process:
 
-Text is converted to a byte array before encryption and vice versa during decryption.
-Example: "Hello" is converted into bytes [72, 101, 108, 108, 111] before encryption.
-Error Handling
+The text is converted into a byte array.
+A cryptographic library (like AES) encrypts the byte array using the shared key.
+The encrypted byte array is converted back into a readable format (e.g., Base64 string).
 
-Implement basic exception handling to ensure the program doesn't crash when invalid inputs are provided or if encryption fails.
-Example: If the key length is incorrect, the program should display a clear error message like "Invalid key length!".
-Examples of Use Case
+E.g. Encrypted Text: TWFuIGlzIGRpc3Q=
 
-User Input:
+5.Decryption Process:
 
-Plaintext: "My Secret Text"
-Key: "Secure123!"
-Program Output:
+The user can input the encrypted text and the shared key.
+The program will reverse the encryption process, converting the Base64 string back to a byte array, and decrypting it using the same shared key.
+Example Output:
 
-Encrypted Text: "7@f92T+Zf!"
-Decrypted Text: "My Secret Text"
-Testing the Program
+Decrypted Text: HelloWorld
 
-Test with various keys and plaintext inputs.
-Handle edge cases, such as empty input or incorrect keys during decryption.
+6.Error Handling:
+
+Handle incorrect inputs, such as a wrong key or malformed encrypted text.
+Example: If the user enters the wrong key, the program should display an error message:
+vbnet
+Copy code
+Error: Decryption failed. Check the key and try again.
+
+7.Test Scenarios:
+
+Test with different texts and keys to ensure the encryption and decryption work correctly.
+Example Test:
+Input:
+makefile
+Copy code
+Text: Confidential  
+
+Key: SafeKey123
+
+Encrypted Text: bXlwa3NlcQ==
+
+Decrypted Text: Confidential
+
 
 # LOG
 1/1/2025
