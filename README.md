@@ -73,3 +73,6 @@ Created the project files. Looked at this: https://www.youtube.com/watch?v=LPT7v
 
 3/1/2025
 Created the java class and comments.
+
+5/1/2025
+Needed some clarification of what I should specifically learn for the project and cleaned the word document.
