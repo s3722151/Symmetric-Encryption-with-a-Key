@@ -26,5 +26,6 @@ public class symetricEncryptionKey {
 /*
 References
 What is AES: https://www.techtarget.com/searchsecurity/definition/Advanced-Encryption-Standard
+What are bits: https://www.youtube.com/watch?v=y8Aw6AnQMws
 Example code: https://www.baeldung.com/java-aes-encryption-decryption
 */
