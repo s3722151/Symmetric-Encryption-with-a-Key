@@ -1,0 +1,47 @@
+import java.security.Key;
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+
+public class Demo1 {
+    public static void main(String[] args) throws Exception {
+
+        // Step 1: Come up with a message we want to encrypt
+        byte[] message = "Hello, World!".getBytes();
+
+        // Step 2: Create a KeyGenerator object
+        KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+
+        // Step 3: Initialize the KeyGenerator with a keysize
+        keyGen.init(256);
+
+        // Step 4: Generate the key
+        Key key = keyGen.generateKey();
+
+        // Step 5: Create a Cipher object
+        Cipher cipher = Cipher.getInstance("AES");
+
+        // Step 6: Initialize the Cipher object
+        cipher.init(Cipher.ENCRYPT_MODE, key);
+
+        // Step 7: Give the Cipher our message
+        cipher.update(message);
+
+        // Step 8: Encrypt the message
+        byte[] ciphertext = cipher.doFinal();
+
+        // Step 9: Print the ciphertext
+        System.out.println("message: " + new String(message, "UTF8"));
+        System.out.println("ciphertext: " + new String(ciphertext, "UTF8"));
+
+        // Step 10: Change the Cipher object's mode
+        cipher.init(Cipher.DECRYPT_MODE, key);
+
+        // Step 11: Give the Cipher objectour ciphertext
+        cipher.update(ciphertext);
+
+        // Step 12: Decrypt the ciphertext
+        byte[] decrypted = cipher.doFinal();
+        System.out.println("decrypted: " + new String(decrypted, "UTF8"));
+    }
+
+}
