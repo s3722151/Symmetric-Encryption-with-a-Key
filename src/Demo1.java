@@ -45,3 +45,6 @@ public class Demo1 {
     }
 
 }
+
+//Source
+//https://gregorycernera.medium.com/encrypting-and-decrypting-a-message-using-symmetric-keys-with-java-explained-step-by-step-with-a523b67877d8
