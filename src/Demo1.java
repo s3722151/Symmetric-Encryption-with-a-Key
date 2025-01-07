@@ -1,9 +1,16 @@
 import java.security.Key;
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
+import java.util.Scanner;  // Import the Scanner class
 
 public class Demo1 {
     public static void main(String[] args) throws Exception {
+    	
+    	//Step 0: Take in user input
+	    Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+	    System.out.println("Enter a text string");
+	    String textString = myObj.nextLine();  // Read user input
+	    System.out.println("The unencrypted string is: " + textString);
 
         // Step 1: Come up with a message we want to encrypt
         byte[] message = "Hello, World!".getBytes();
