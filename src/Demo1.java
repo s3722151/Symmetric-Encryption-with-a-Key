@@ -13,7 +13,8 @@ public class Demo1 {
 	    System.out.println("The unencrypted string is: " + textString);
 
         // Step 1: Come up with a message we want to encrypt
-        byte[] message = "Hello, World!".getBytes();
+        //byte[] message = "Hello, World!".getBytes();
+        byte[] message = textString.getBytes();
 
         // Step 2: Create a KeyGenerator object
         KeyGenerator keyGen = KeyGenerator.getInstance("AES");
@@ -48,7 +49,7 @@ public class Demo1 {
 
         // Step 12: Decrypt the ciphertext
         byte[] decrypted = cipher.doFinal();
-        System.out.println("decrypted: " + new String(decrypted, "UTF8"));
+        System.out.println("Cipher text that was decrypted is: " + new String(decrypted, "UTF8"));
     }
 
 }
