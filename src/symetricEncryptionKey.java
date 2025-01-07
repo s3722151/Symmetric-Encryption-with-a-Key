@@ -45,7 +45,7 @@ public class symetricEncryptionKey {
         // Step 10: Change the Cipher object's mode
         cipher.init(Cipher.DECRYPT_MODE, key);
 
-        // Step 11: Give the Cipher objectour ciphertext
+        // Step 11: Give the Cipher object our ciphertext
         cipher.update(ciphertext);
 
         // Step 12: Decrypt the ciphertext
