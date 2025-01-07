@@ -17,19 +17,19 @@ public class symetricEncryptionKey {
         //byte[] message = "Hello, World!".getBytes();
         byte[] message = textString.getBytes();
 
-        // Step 2: Create a KeyGenerator object
+        // Step 2: Create a KeyGenerator object - Generate a secret (symmetric) key
         KeyGenerator keyGen = KeyGenerator.getInstance("AES");
 
-        // Step 3: Initialize the KeyGenerator with a keysize
+        // Step 3: Initialize KeyGenerator - tell how many bytes we want our key to be.
         keyGen.init(256);
 
         // Step 4: Generate the key
         Key key = keyGen.generateKey();
 
-        // Step 5: Create a Cipher object
+        // Step 5: Create a Cipher object -  handle our encryption and decryption
         Cipher cipher = Cipher.getInstance("AES");
 
-        // Step 6: Initialize the Cipher object
+        // Step 6: Initialize the Cipher object - Tell to encrypt
         cipher.init(Cipher.ENCRYPT_MODE, key);
 
         // Step 7: Give the Cipher our message
@@ -39,10 +39,10 @@ public class symetricEncryptionKey {
         byte[] ciphertext = cipher.doFinal();
 
         // Step 9: Print the ciphertext
-        System.out.println("message: " + new String(message, "UTF8"));
-        System.out.println("ciphertext: " + new String(ciphertext, "UTF8"));
+        System.out.println("Plain message, unencrypted input is: " + new String(message, "UTF8"));
+        System.out.println("Ciphertext, encrypted input is now: " + new String(ciphertext, "UTF8"));
 
-        // Step 10: Change the Cipher object's mode
+        // Step 10: Change the Cipher object's mode - Tell to decrypt
         cipher.init(Cipher.DECRYPT_MODE, key);
 
         // Step 11: Give the Cipher object our ciphertext
