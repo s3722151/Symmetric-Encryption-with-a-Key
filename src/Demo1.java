@@ -12,7 +12,7 @@ public class Demo1 {
 	    String textString = myObj.nextLine();  // Read user input
 	    System.out.println("The unencrypted string is: " + textString);
 
-        // Step 1: Come up with a message we want to encrypt
+        // Step 1: Convert the text to bytes.
         //byte[] message = "Hello, World!".getBytes();
         byte[] message = textString.getBytes();
 
