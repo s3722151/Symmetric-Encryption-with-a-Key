@@ -76,3 +76,9 @@ Created the java class and comments.
 
 5/1/2025
 Needed some clarification of what I should specifically learn for the project and cleaned the word document.
+
+7/1/2025
+I made the project following a guide (Medium) on how to do symmetric encryption.
+
+8/1/2025
+I used chatGPT to check if the project could have been improved. 
