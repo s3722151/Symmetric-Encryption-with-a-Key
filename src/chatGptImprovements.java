@@ -47,7 +47,7 @@ public class chatGptImprovements {
 
     /**
      * Encrypts a message using AES and the provided key.
-     *
+     * The following parameters in the methods do the following:
      * @param messageBytes The plaintext message as a byte array.
      * @param key The AES key for encryption.
      * @return The encrypted message as a byte array.

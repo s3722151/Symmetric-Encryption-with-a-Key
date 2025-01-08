@@ -71,4 +71,29 @@ Notes
 - AES is a form of symmetric encryption 
 - Symmetric encryption is good if you decryot with private key
 
+Does it work?
+My code works as part of project requirements
+
+Areas of improvement 
+1.Key Size Initialization:
+	You initialize the key generator with 256 bits, which is fine, 
+	but note that using a 256-bit key in AES requires additional configuration in Java 
+	(e.g., installing the Unlimited Strength Jurisdiction Policy Files in older JDK versions). 
+	If not installed, the program might throw an exception on some systems.
+	To ensure broader compatibility, you might consider using a 128-bit key (keyGen.init(128)).
+
+2.Readable Ciphertext Output:
+	The ciphertext is printed using new String(ciphertext, "UTF8"), 
+	which might not display correctly because ciphertext bytes can include non-printable characters. 
+	Using Base64 encoding (Base64.getEncoder().encodeToString(ciphertext)) 
+	is more appropriate for readable output.
+
+3.Error Handling:
+	Your program uses a blanket throws Exception, which could mask specific issues (e.g., invalid inputs, cryptographic errors). 
+	Catching and handling exceptions like IllegalBlockSizeException or BadPaddingException would improve robustness.
+
+4.Code Modularity:
+Separating encryption and decryption logic into reusable methods would improve readability and maintainability.
+
+
 */
